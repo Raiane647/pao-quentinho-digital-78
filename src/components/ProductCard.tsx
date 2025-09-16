@@ -69,9 +69,12 @@ const ProductCard = ({ product, onCustomize }: ProductCardProps) => {
           </p>
         </div>
         
-        <div className="flex items-center justify-between pt-2">
-          <div className="text-xl font-bold text-primary">
-            {product.isCustomizable ? `A partir de ${formatPrice(product.price)}` : formatPrice(product.price)}
+        <div className="flex items-center justify-between pt-2 mt-auto">
+          <div className="flex flex-col">
+            <span className="text-sm text-muted-foreground">Preço</span>
+            <div className="text-2xl font-bold text-primary">
+              {product.isCustomizable ? `A partir de ${formatPrice(product.price)}` : formatPrice(product.price)}
+            </div>
           </div>
           
           <Button 
