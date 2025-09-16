@@ -69,11 +69,15 @@ const ProductCard = ({ product, onCustomize }: ProductCardProps) => {
           </p>
         </div>
         
-        <div className="flex items-center justify-between pt-2 mt-auto">
+        <div className="flex items-center justify-between pt-4 border-t border-border/50">
           <div className="flex flex-col">
-            <span className="text-sm text-muted-foreground">Preço</span>
-            <div className="text-2xl font-bold text-primary">
-              {product.isCustomizable ? `A partir de ${formatPrice(product.price)}` : formatPrice(product.price)}
+            <span className="text-xs uppercase tracking-wide text-muted-foreground font-medium mb-1">Preço</span>
+            <div className="text-2xl font-bold text-foreground">
+              {product.isCustomizable ? (
+                <span className="text-lg">A partir de <span className="text-primary">{formatPrice(product.price)}</span></span>
+              ) : (
+                <span className="text-primary">{formatPrice(product.price)}</span>
+              )}
             </div>
           </div>
           
@@ -81,7 +85,7 @@ const ProductCard = ({ product, onCustomize }: ProductCardProps) => {
             size="sm" 
             onClick={handleAddToCart}
             disabled={!product.isAvailable || isAdding}
-            className="bg-primary hover:bg-primary/90"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground"
           >
             {product.isCustomizable ? (
               <>
