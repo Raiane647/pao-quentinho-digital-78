@@ -58,15 +58,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center relative">
-          <p className="text-primary-foreground/60 text-sm">
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
+          <p className="text-primary-foreground/60 text-sm flex items-center justify-center gap-2">
             © 2024 Padaria Pão Quentinho. Todos os direitos reservados.
+            <img 
+              src={trilhaTechLogo} 
+              alt="Trilha Tech" 
+              className="w-[88px] h-[68px]"
+            />
           </p>
-          <img 
-            src={trilhaTechLogo} 
-            alt="Trilha Tech" 
-            className="absolute bottom-0 right-0 w-[88px] h-[68px]"
-          />
         </div>
       </div>
     </footer>
