@@ -1,4 +1,5 @@
 import { MapPin, Phone, Clock, Mail } from "lucide-react";
+import trilhaTechLogo from "@/assets/trilha-tech-logo.png";
 
 const Footer = () => {
   return (
@@ -57,10 +58,15 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center relative">
           <p className="text-primary-foreground/60 text-sm">
             © 2024 Padaria Pão Quentinho. Todos os direitos reservados.
           </p>
+          <img 
+            src={trilhaTechLogo} 
+            alt="Trilha Tech" 
+            className="absolute bottom-0 right-0 w-[15px] h-[15px]"
+          />
         </div>
       </div>
     </footer>
