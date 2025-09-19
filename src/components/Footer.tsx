@@ -65,7 +65,7 @@ const Footer = () => {
           <img 
             src={trilhaTechLogo} 
             alt="Trilha Tech" 
-            className="absolute bottom-0 right-0 w-[88px] h-[68px]"
+            className="absolute bottom-8 right-0 w-[88px] h-[68px]"
           />
         </div>
       </div>
